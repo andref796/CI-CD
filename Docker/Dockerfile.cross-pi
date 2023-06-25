@@ -1,0 +1,8 @@
+# Dockerfile.cross-pi
+FROM cross-yocto
+
+RUN cd /root && \
+    wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1DAegBLrSYe81yJ61EETZJXsDxhGL4Gkn' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1DAegBLrSYe81yJ61EETZJXsDxhGL4Gkn" -O poky-glibc-x86_64-core-image-base-cortexa7t2hf-neon-vfpv4-raspberrypi3-toolchain-4.0.10.sh && rm -rf /tmp/cookies.txt && \
+    chmod +x poky-glibc-x86_64-core-image-base-cortexa7t2hf-neon-vfpv4-raspberrypi3-toolchain-4.0.10.sh && \
+    /bin/sh poky-glibc-x86_64-core-image-base-cortexa7t2hf-neon-vfpv4-raspberrypi3-toolchain-4.0.10.sh -y 
+    
