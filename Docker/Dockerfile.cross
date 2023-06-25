@@ -38,6 +38,8 @@ RUN apt-get update && \
     libssl-dev \
     openssh-client \
     pkg-config \
+    gcc \
+    g++ \
     cmake \
     findutils \
     software-properties-common &&\
