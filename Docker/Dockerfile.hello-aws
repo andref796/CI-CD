@@ -12,7 +12,7 @@ RUN mkdir -p $BIN_DIR && \
   . /opt/poky/4.0.10/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi && \
   cmake -DCMAKE_BUILD_TYPE="Debug" .. && \
   cmake --build . --config "Debug"  && \
-  cp -r ${BUILD_DIR}/basic_pub_sub ${BIN_DIR} 
+  cp -r ${BUILD_DIR}/basic-pub-sub ${BIN_DIR} 
 
 FROM scratch
 COPY --from=builder /tmp/bin /
